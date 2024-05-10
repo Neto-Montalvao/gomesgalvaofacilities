@@ -1,0 +1,302 @@
+
+
+/* Carrossel */
+
+.ac{
+    width: 100vw;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile .ac{
+    height: 200rem;
+}
+
+.desktop .ac{
+    height: 429.375rem;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-bottom: 1rem solid #FFF;
+}
+.glider-track{
+    transition: margin-left 1s;
+    margin-left: 00vw;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.slide{
+    min-width: 100vw;
+    max-width: 100vw;
+    height: 200rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 167rem -100rem 61rem -12rem rgba(0, 0, 0, 0.83) inset, 0rem 0rem 3.2rem 0rem #001934;
+}
+
+.desktop .slide{
+    height: 429.375rem;
+    box-shadow: 510rem 4rem 250rem -13rem rgba(0, 0, 0, 0.72) inset;
+}
+
+.slide p {
+    word-break: break-word;
+}
+
+
+.slide h2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 2rem 1rem 2rem rgba(0, 0, 0, 0.63);
+    font-family: 'Orbitron', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.mobile .slide h2{
+    width: 135rem;
+    height: 32rem;
+    font-size: 20rem;
+    margin-top: 21rem;
+
+}
+
+.desktop .slide h2{
+    width: 482rem;
+    height: 69rem;
+    margin-top: 28rem;
+    font-size: 50rem;
+
+}
+
+.small-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #FFF;
+    text-align: center;
+    text-shadow: 2rem 1rem 2rem rgba(0, 0, 0, 0.63);
+    font-weight: 600;
+}
+
+.mobile .small-description{
+    width: 124rem;
+    height: 54rem;
+    font-size: 12rem;
+    margin: 15rem 0 0 33rem;
+}
+
+.desktop .small-description{
+    width: 371rem;
+    height: 103rem;
+    font-size: 24rem;
+    margin: 45rem 0 0 93rem;
+}
+
+
+.large-description{
+    width: 215rem;
+    height: 57rem;    
+    font-size: 9rem;
+    margin: 15rem 0 0 46rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-shadow: 2rem 1rem 2rem rgba(0, 0, 0, 0.63);
+}
+.desktop .large-description{
+    width: 418rem;
+    height: 163rem;
+    font-size: 18rem;
+    margin: 5rem 0 0 120rem;
+}
+
+
+.ac button{
+    position: absolute;
+    z-index: 999;
+}
+
+.ac button{
+    border-radius: 100%;
+    background-color: transparent;
+    border-color: transparent;
+    background-image: url('../imgs/seta.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 0;
+    width: 28rem;
+    height: 28rem;
+    transition: transform 0.5s;
+}
+
+.desktop .ac button{
+    width: 60rem;
+    height: 60rem;
+}
+
+
+.ac .avancar:hover{
+    transform: scale(1.1) rotate(-90deg);
+}
+
+.ac .voltar:hover{
+    transform: scale(1.1) rotate(90deg);
+}
+
+.ac .avancar:active{
+    transform: scale(1) rotate(-90deg);
+}
+
+.ac .voltar:active{
+    transform: scale(1) rotate(90deg);
+}
+
+
+.avancar{
+    transform: rotate(-90deg);
+    right: 0;
+}
+
+.voltar{
+    transform: rotate(90deg);
+    left: 0;
+}
+
+.ultimo_elemento{
+    display: none;
+}
+
+
+/* ----------------------------- descricao com foto -----------------------------*/
+
+.descricao-secao{
+    padding: 0 10rem 17rem 10rem;
+    border: 1rem solid rgba(13, 120, 226, 0.20);
+    box-shadow: 0rem 0rem 5.6rem 3rem #003B7A, 0rem 4rem 72.9rem 4rem rgba(0, 0, 0, 0.56) inset;
+    background-repeat: no-repeat!important;
+    background-position: center!important;
+    background-size: cover!important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    transition: transform 0.5s;
+}
+ 
+.descricao-secao .titulosec{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    text-shadow: 0rem 4rem 4rem rgba(0, 0, 0, 0.25), 2rem 1rem 2rem rgba(0, 0, 0, 0.63);
+    font-weight: 700;
+    align-items: center;
+}
+
+.mobile .descricao-secao .titulosec{
+    height: 22rem;
+    font-size: 16rem;
+}
+.desktop .descricao-secao .titulosec{
+    height: 66rem;
+    font-size: 45rem;
+}
+.desktop .descricao-secao:has(div h3.selected){
+    transform: scale(1.1);
+}
+.descricao-secao div.titulosec h3{
+    width: min-content;
+    height: min-content;
+    font-size: inherit;
+    margin-top: 0;
+    text-align: center;
+    transition: all 0.5s;
+    white-space: nowrap;
+}
+.descricao-secao>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.mobile .descricao-secao>div{
+    min-width: 320rem;
+}
+
+.desktop .descricao-secao>div{
+    min-width: 975.0rem;
+}
+
+
+.descricao-secao div *:not(h3){
+    width: 143.0rem;
+    height: 87.0rem;
+    margin-top: 15.0rem;
+    font-size: 8.0rem;
+    object-fit: cover;
+    border-radius: 6.0rem;
+    transition: transform 0.5s;
+    word-break: break-word;
+}
+
+.desktop .descricao-secao div *{
+    width: 453.0rem;
+    height: 228.0rem;
+    margin-top: 20.0rem;
+    font-size: 21.0rem;
+}
+.desktop .descricao-secao div *:hover{
+    transform: scale(1.1);
+}
+
+
+.descricao-secao p + .visualizar{
+    box-shadow: 0.0rem 0.0rem 4.0rem 2.0rem rgba(13, 108, 202, 0.55);      
+}
+.mobile .descricao-secao p + .visualizar:hover{
+    z-index: 20;
+    transform: scale(2) translateX(-40rem);
+    transition: transform 0.5s;
+}
+.mobile .descricao-secao .visualizar + p:hover{
+    z-index: 20;
+    transform: scale(2) translateX(-40rem);
+    padding: 10vw;
+    background-color: black;
+
+}
+.mobile .descricao-secao p:hover:has(+.visualizar){
+    z-index: 20;
+    transform: scale(2) translateX(40rem);
+    transition: transform 0.5s;
+    background-color: black;
+    padding: 10vw;
+
+}
+
+.descricao-secao .visualizar:has(+p){
+    box-shadow: 0.0rem 0.0rem 4.0rem 2.0rem rgba(219, 36, 28, 0.55);       
+}
+
+.mobile .descricao-secao .visualizar:hover:has(+p){
+    z-index: 20;
+    transform: scale(2) translateX(40rem);
+    transition: transform 0.5s;
+}
